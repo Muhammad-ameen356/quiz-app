@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/quiz.css">
+</head>
+
+<body>
+
+    <section class="top">
+        <nav class="navbar navbar-light bg-dark w-100">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <span class="container"
+                        style="color: white; font-family: 'Courier New', Courier, monospace; font-weight: bolder; font-size: 40px;">Quiz
+                        App</span>
+                </a>
+            </div>
+        </nav>
+    </section>
+
+    <br><br>
+    <form action="./result.html" method="GET">
+        <section class="container">
+            <section class="quiz-1">
+                <h5>1) Inside which HTML element do we put the JavaScript?</h5>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="q1radio1"
+                        value="option1">
+                    <label class="form-check-label" for="q1radio1">&lt;Scripting&gt;</label>
+                </div>
+
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="q1radio2"
+                        value="option1">
+                    <label class="form-check-label" for="q1radio2">&lt;Js&gt;</label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="q1radio3"
+                        value="option1">
+                    <label class="form-check-label" for="q1radio3">&lt;Javascript&gt;</label>
+                </div>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="q1radio4"
+                        value="option1">
+                    <label class="form-check-label" for="q1radio4">&lt;Script&gt;</label>
+                </div>
+            </section>
+            <br><br>
+            <section class="quiz-2">
+                <h5>2) What is the correct JavaScript syntax to change the content of the HTML element below?</h5>
+
+                <h6>&lt;p id="demo"&gt;This is a demonstration. &lt;/p&gt;</h6>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="q2radio1"
+                        value="option1">
+                    <label class="form-check-label" for="q2radio1"> document.getElement("p").innerHTML = "Hello
+                        World!";</label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="q2radio2"
+                        value="option1">
+                    <label class="form-check-label" for="q2radio2"> document.getElement("p").innerHTML = "Hello
+                        World!";</label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="q2radio3"
+                        value="option1">
+                    <label class="form-check-label" for="q2radio3"> document.getElementById("demo").innerHTML = "Hello
+                        World!";</label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="q2radio4"
+                        value="option1">
+                    <label class="form-check-label" for="q2radio4"> #demo.innerHTML = "Hello World!";</label>
+                </div>
+            </section>
+
+            <br><br>
+            <section class="quiz-3">
+                <h5>3) Where is the correct place to insert a JavaScript?</h5>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="q3radio1"
+                        value="option1">
+                    <label class="form-check-label" for="q3radio1"> The &lt;Head&gt; Section</label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="q3radio2"
+                        value="option1">
+                    <label class="form-check-label" for="q3radio2">Both the &lt;Head&gt; section and the &lt;body&gt;
+                        Section are correct</label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="q3radio3"
+                        value="option1">
+                    <label class="form-check-label" for="q3radio3"> The &lt;body&gt; section</label>
+                </div>
+                <br>
+                <!-- <div class="form-check form-check-inline quiz-option">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="q3radio4" value="option1">
+                <label class="form-check-label" for="q3radio4"> #demo.innerHTML = "Hello World!";</label>
+            </div> -->
+            </section>
+            <br><br>
+            <section class="quiz-4">
+                <h5>4) What is the correct syntax for referring to an external script called "xxx.js"?</h5>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="q4radio1"
+                        value="option1">
+                    <label class="form-check-label" for="q4radio1"> &lt;script src="xxx.js"&gt; </label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="q4radio2"
+                        value="option1">
+                    <label class="form-check-label" for="q4radio2">&lt;script href="xxx.js"&gt;</label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="q4radio3"
+                        value="option1">
+                    <label class="form-check-label" for="q4radio3"> &lt;script name="xxx.js"&gt;</label>
+                </div>
+                <br>
+            </section>
+            <br><br>
+            <section class="quiz-5">
+                <h5>5) The external JavaScript file must contain the &lt;script&gt; tag.</h5>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="q5radio1"
+                        value="option1">
+                    <label class="form-check-label" for="q5radio1"> False</label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline quiz-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="q5radio2"
+                        value="option1">
+                    <label class="form-check-label" for="q5radio2">True</label>
+                </div>
+                <br>
+
+            </section>
+            <br><br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+
+                <button class="btn btn-primary" type="submit" onclick="check()">Button</button>
+            </div>
+
+            <br><br>
+
+        </section>
+    </form>
+
+
+
+
+
+
+    <script src="./app.js"></script>
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
