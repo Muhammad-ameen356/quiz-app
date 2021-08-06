@@ -24,8 +24,8 @@ function check() {
         score++
     }
 
-    alert(score);
-    localStorage.setItem("Score", `${score}`)
+    // alert(score);
+    sessionStorage.setItem("Score", `${score}`)
 
 }
 
@@ -35,7 +35,23 @@ function openFullscreen() {
 }
 
 function run() {
-    var a = Number(localStorage.getItem("Score"));
-    // console.log(typeof a);
-    var b = document.getElementById("abc").innerHTML = "Your Score " + a
+    var a = Number(sessionStorage.getItem("Score"));
+    console.log(a);
+    // var b = document.getElementById("abc").innerHTML = "Your Score " + a
+    var passOrfail = document.getElementById("result");
+    var feedBack = document.getElementById("feedback");
+    var scoreShow = document.getElementById("scoreshow").innerHTML = "Your Score: " + a + " Out of 5";
+    var background = document.getElementById("background");
+    if (a >= 3) {
+        passOrfail.innerHTML = "Pass";
+        feedBack.innerHTML = "Well Done";
+        passOrfail.classList.add("pass");
+        background.classList.add("congratulation");
+    } else if (a < 3) {
+        passOrfail.innerHTML = "fail";
+        feedBack.innerHTML = "You Need to work Hard";
+        passOrfail.classList.add("fail");
+        background.classList.add("udas");
+
+    }
 }
