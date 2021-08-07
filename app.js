@@ -31,7 +31,9 @@ function check() {
 
 
 function openFullscreen() {
+    alert("Please Dont change your tab or window other Wise you will be kick out from the quiz" + "\n" + "\n" + "Press Ok button to start Your Exam");
     var newWindow = window.open("./quiz.html", "Quiz Page", "width=" + screen.availWidth + ",height=" + screen.availHeight);
+
 }
 
 function run() {
