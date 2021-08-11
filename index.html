@@ -15,6 +15,13 @@
 </head>
 
 <body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+        </symbol>
+    </svg>
     <div>
         <section class="top">
             <nav class="navbar navbar-light bg-dark w-100">
@@ -30,21 +37,136 @@
             </nav>
         </section>
 
-
         <section class="first-screen">
+            <div class="alert alert-warning d-flex align-items-center hide" id="alertid" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+                    <use xlink:href="#exclamation-triangle-fill" />
+                </svg>
+                <div>
+                    Please Enter Your Name or Roll Number 
+                </div>
+            </div>
             <h1>Quiz Application</h1>
             <h2>Saylani Mass It Training Program</h2>
             <p>Saylani Mass IT Training program is an institute who delivers latest IT education (FREE OF COST).</p>
             <p>Saylani Mass Training Department is one of the department which is running under Saylani Welfare Trust
                 Management.</p>
-            <!-- <a href="./quiz.html"> -->
-            <button type="button" onclick="openFullscreen()" class="btn btn-dark">Start your exam here:</button>
-            <!-- </a>  -->
+            <!-- <button type="button" onclick="openFullscreen()" class="btn btn-dark">Start your exam here:</button> -->
+            <!-- <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@getbootstrap">Start Your Exam Here:</button> -->
+                <button class="btn btn-dark" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Start Your Exam Here:</button>
 
         </section>
-
-
     </div>
+
+
+
+    <!-- Button trigger modal -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="alert alert-warning d-flex align-items-center hide" id="alertid" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+                            <use xlink:href="#exclamation-triangle-fill" />
+                        </svg>
+                        <div>
+                            Please Enter Your Roll Number or Name
+                        </div>
+                    </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Enter Your Infromation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="openFullscreen()" class="btn btn-primary">Start Exam</button>
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Your Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Your Name:</label>
+                            <input type="text" class="form-control" id="recipient-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Roll Number:</label>
+                            <input type="text" class="form-control" id="recipient-rollnumber" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="validation()" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                        >Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modalhide" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="alert alert-warning d-flex align-items-center hide" id="alertid2" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+                        <use xlink:href="#exclamation-triangle-fill" />
+                    </svg>
+                    <div id="alerttext">
+                        Please Enter Your Name or Roll Number 
+                    </div>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Test Key</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal2body">
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Test Key:</label>
+                        <input type="text" class="form-control" id="testkey" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Back</button> -->
+                        <button class="btn btn-primary" id="procced"  onclick="openFullscreen()">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

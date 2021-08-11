@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import "compass/css3";
+
 * {
   margin: 0;
   padding: 0;
@@ -24,3 +26,21 @@ body {
   margin-top: 10px;
   text-align: center;
 }
+
+.hide{
+  visibility: hidden !important;
+  /* transition: 0.2s; */
+}
+
+.show{
+    visibility: visible !important;
+    /* transition: 0.2s; */
+
+}
+
+
+
+/* .modalhide{
+  display: none !important;
+
+} */
