@@ -28,14 +28,24 @@ body {
 }
 
 .hide{
-  visibility: hidden !important;
-  /* transition: 0.2s; */
+  display: none !important;
+  /* visibility: hidden !important; */
+  transition: 0.2s;
 }
 
 .show{
-    visibility: visible !important;
-    /* transition: 0.2s; */
+  display: "" !important;
+    /* visibility: visible !important; */
+    transition: 0.2s;
 
+}
+
+.hidealert{
+  visibility: hidden !important;
+}
+
+.showalert{
+  visibility: visible !important;
 }
 
 

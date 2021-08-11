@@ -33,6 +33,9 @@ validation = () => {
     var show = document.getElementById("alertid");
     var modal2body = document.getElementById("modal2body");
     var procced = document.getElementById("procced");
+    var keyPage = document.getElementById("exampleModalToggle2");
+    var refresh = document.getElementById("refresh");
+    var closebutton = document.getElementById("closebutton");
 
     if ((name.length && rollNumber.length) == 0) {
         show.classList.add("show");
@@ -43,11 +46,17 @@ validation = () => {
 
         modal2body.innerHTML = "Enter Your Name Or Roll Number To Get Started";
         procced.classList.add("hide");
+        refresh.classList.add("show");
+        closebutton.classList.add("hide");
     }
     else if ((name.length && rollNumber.length) > 0) {
         procced.classList.add("show")
         localStorage.setItem("Name", `${name}`);
         localStorage.setItem("Roll", `${rollNumber}`);
+        refresh.classList.add("hide");
+        closebutton.classList.add("show");
+
+
     }
 }
 
@@ -66,15 +75,15 @@ openFullscreen = () => {
         location.reload();
     } else if(testkey.length == 0){
         alerttext.innerHTML = "Enter Key to start"
-        alert2.classList.add("show")
+        alert2.classList.add("showalert")
         setTimeout(function () {
-            alert2.classList.remove("show");
+            alert2.classList.remove("showalert");
         }, 3000);
     }else if(testkey !== key ){
         alerttext.innerHTML = "Key Not Match"
-        alert2.classList.add("show")
+        alert2.classList.add("showalert")
         setTimeout(function () {
-            alert2.classList.remove("show");
+            alert2.classList.remove("showalert");
         }, 3000);
     } 
     
@@ -104,4 +113,7 @@ run = () => {
     }
 }
 
+refresh = () => {
+    location.reload();
 
+}

@@ -75,15 +75,15 @@ openFullscreen = () => {
         location.reload();
     } else if(testkey.length == 0){
         alerttext.innerHTML = "Enter Key to start"
-        alert2.classList.add("show")
+        alert2.classList.add("showalert")
         setTimeout(function () {
-            alert2.classList.remove("show");
+            alert2.classList.remove("showalert");
         }, 3000);
     }else if(testkey !== key ){
         alerttext.innerHTML = "Key Not Match"
-        alert2.classList.add("show")
+        alert2.classList.add("showalert")
         setTimeout(function () {
-            alert2.classList.remove("show");
+            alert2.classList.remove("showalert");
         }, 3000);
     } 
     

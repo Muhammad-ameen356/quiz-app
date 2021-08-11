@@ -40,6 +40,14 @@ body {
 
 }
 
+.hidealert{
+  visibility: hidden !important;
+}
+
+.showalert{
+  visibility: visible !important;
+}
+
 
 
 /* .modalhide{
